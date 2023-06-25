@@ -5,6 +5,8 @@ class CurrencyCard extends StatelessWidget {
   final IconData icon;
   final bool isInverted;
 
+  final _blackColor = const Color(0xFF1F2123);
+
   const CurrencyCard({
     super.key,
     required this.name,
@@ -16,11 +18,11 @@ class CurrencyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textColor = isInverted ? Colors.black : Colors.white;
+    var textColor = isInverted ? _blackColor : Colors.white;
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: isInverted ? Colors.white : const Color(0xFF1F2123),
+        color: isInverted ? Colors.white : _blackColor,
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
