@@ -32,7 +32,6 @@ class _DetailScreenState extends State<DetailScreen> {
         });
       }
     } else {
-      print('???');
       await prefs.setStringList('likedToons', []);
     }
   }
